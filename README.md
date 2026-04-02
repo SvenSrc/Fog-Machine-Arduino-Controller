@@ -28,6 +28,10 @@ Blue cable   -> Pin 11
 
 The code was written and uploaded onto the Arduino UNO board using the Arduino IDE. It would also work using other boards however you would need to change its Pin settings. The Arduino is powered through the JST connector which uses the fog machine boards internal 5V supply so no separate power source is needed for the Arduino after uploading the code. The Arduino purely acts as a controller sending signals to the relay and RGB inputs on the board.
 
+## Functions
+
+It can turn the pump of the fog machine on and off to produce fog. For the lights it can currently switch between: Off, Red, Green, Blue, Rainbow (smoothly fading through all colours) and Police. In the code the speed and brightness can be configured.
+
 ## Images
 
 <img src="images/cable.jpg" height="500">
