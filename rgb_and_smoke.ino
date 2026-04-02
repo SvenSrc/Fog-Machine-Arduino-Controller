@@ -29,9 +29,6 @@ bool smokeEnabled = false;
 int lightMode = 0;
 int const NUM_COLOURS = 6;
 
-float breathAngle = 0.0;
-bool strobeOn = false;
-unsigned long lastStrobeTime = 0;
 bool policeRed = true;
 unsigned long lastPoliceTime = 0;
 
