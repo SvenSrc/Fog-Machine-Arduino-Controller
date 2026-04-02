@@ -8,25 +8,29 @@ First disassemble the fog machine to access its control board. The board needs t
 
 This works because we are essentially doing the same job as the remote and microcontroller would but we are just sending signals directly. The large black component on the top left of the board is a relay. By sending a signal into its IN port we allow current from the mains supply to flow into the pump which then produces the fog. The heating element runs continuously whenever the machines power switch is on. For the lights we send PWM signals (values 0–255) from the Arduino directly to the board which uses its onboard transistors to drive the RGB LED strip.
 
-![board_1](images/board_1.jpg)
+<img src="images/board_1.jpg" height="750">
 
 Above is an image showing the soldering. The cables are soldered onto the pads connected to the NPN transistors. The image marks the connections for the fog relay, RGB lights, and JST GND/+5V. Here is the wiring used:
 
-RGB Button   -> Pin 4  (other to GND)
-Smoke Button -> Pin 5  (other to GND)
+RGB Button   -> Pin 4  (other to GND)  
+Smoke Button -> Pin 5  (other to GND)  
 
-JST +5V      -> Arduino 5V
-JST GND      -> GND
+JST +5V      -> Arduino 5V  
+JST GND      -> GND  
 
-Relay IN     -> Pin 2 
+Relay IN     -> Pin 2  
 
 Red cable    -> Pin 9  
-Green cable  -> Pin 10 
-Blue cable   -> Pin 11 
+Green cable  -> Pin 10  
+Blue cable   -> Pin 11  
 
 ![cable_layout](images/cable_layout.png)
 
 The code was written and uploaded onto the Arduino UNO board using the Arduino IDE. It would also work using other boards however you would need to change its Pin settings. The Arduino is powered through the JST connector which uses the fog machine boards internal 5V supply so no separate power source is needed for the Arduino after uploading the code. The Arduino purely acts as a controller sending signals to the relay and RGB inputs on the board.
+
+## Functions
+
+It can turn the pump of the fog machine on and off to produce fog. For the lights it can currently switch between: Off, Red, Green, Blue, Rainbow (smoothly fading through all colours) and Police. In the code the speed and brightness can be configured.
 
 ## Images
 
