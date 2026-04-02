@@ -1,12 +1,17 @@
 // ============================================================
-//
 //  WIRING:
-//    RGB Button   -> Pin 4  (other leg to GND)
-//    Smoke Button -> Pin 5  (other leg to GND)
-//    Fog machine  -> Pin 2  (OUTPUT)
-//    Red cable    -> Pin 9  (PWM ~)
-//    Green cable  -> Pin 10 (PWM ~)
-//    Blue cable   -> Pin 11 (PWM ~)
+//    RGB Button   -> Pin 4  (other to GND)
+//    Smoke Button -> Pin 5  (other to GND)
+//
+//    JST +5V      -> Arduino 5V
+//    JST GND      -> GND
+//
+//    Relay IN     -> Pin 2  
+//
+//    Red cable    -> Pin 9  
+//    Green cable  -> Pin 10 
+//    Blue cable   -> Pin 11 
+//
 // ============================================================
 
 // Pin Definitions 
